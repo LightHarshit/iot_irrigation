@@ -2,6 +2,7 @@ package com.example.iot_irrigation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.login:
-                String password = editText_password.getText().toString();
+                /*String password = editText_password.getText().toString();
                 String username = editText_username.getText().toString();
 
                 if(!username.isEmpty() && !password.isEmpty()){
@@ -70,7 +71,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 else
                     Toast.makeText(this,"Username and password fields cannot be left blank",Toast.LENGTH_SHORT).show();
-                break;
+                break;*/
+                Intent intent = new Intent(this,WeatherReoprt.class);
+                startActivity(intent);
         }
     }
 }
